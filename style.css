@@ -228,14 +228,14 @@ header{
     color: teal;
     position: relative;
     top: 5px;
-    right: 23rem;
+    right: 19rem;
 }
 #close-icon{
     display: none;
     color: teal;
     position: relative;
     top: 5px;
-    right: 23rem;
+    right: 19rem;
 }
   .icons{
     display: block;
@@ -331,7 +331,7 @@ header{
       background:#ff6347;
       position: relative;
       top: -0.7rem;
-      left: 6rem;
+      left: 8rem;
       height: 45px;
       width: 130px;
       font-weight: 700;
