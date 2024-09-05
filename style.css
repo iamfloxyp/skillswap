@@ -1,0 +1,693 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: "montserrat", 'sans-serif';
+    background: #BDC3C7;
+}
+
+/* header */
+header{
+  display: flex; 
+  flex-direction: row; 
+  height:100px ;
+  background:#f0f0f0;
+  padding: 20px 30px;
+  gap: 18rem;
+  z-index: 1000;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+.logo img{
+    height: 60px;
+}
+.logo h3{
+    position: relative;
+    bottom: 1.7rem;
+    left: 3.8rem;
+    font-size: 20px;
+    color: teal;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 2rem;
+    cursor: pointer;
+}
+.nav-links{
+    display: flex;
+    gap: 2.5rem;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+li{
+    list-style: none;
+    transition: color 0.3s ease;
+}
+li:hover{
+    color:rgb(238, 84, 28);
+}
+.icons{
+display: none;
+}
+.nav-links button{
+    background:#ff6347;
+    position: relative;
+    top: -0.7rem;
+    left: 2rem;
+    height: 45px;
+    width: 130px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+.nav-links button:hover{
+    background-color: #008080;
+}
+.btn button{
+    background:linear-gradient(to left, #ff6347 ,#008080);
+    position: relative;
+    top: -0.7rem;
+    left: 5rem;
+    height: 45px;
+    width: 130px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+.btn button:hover{
+    background:linear-gradient(to right, #ff6347 ,#008080 );
+}
+/* hero section */
+.hero{
+    background-image: url(./images/background\ 2.jpeg);
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    margin-top: 0;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+.hero-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    top: 10rem;
+    left: 6rem;
+    max-width: 80%;
+    text-align: center;
+    z-index: 2;
+} 
+.hero-text h1{
+    color: #fff;
+    font-size: 40px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.hero-text h4{
+    color: #f5f2f2;
+    max-width: 55%;
+    line-height: 36px;
+    position: relative;
+    left: 16rem;
+    font-size: 18px;
+}
+
+.hero-text button{
+    background:#ff6347;
+    position: relative;
+    top: -0.7rem;
+    left: 33rem;
+    height: 45px;
+    width: 130px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+.hero-text button:hover{
+    background-color: #008080;
+}
+
+/*****************  media query****************/
+@media (min-width:340px) and (max-width: 500px){
+    /* header */
+header{
+    display: flex; 
+    flex-direction: row; 
+    height:100px ;
+    background:#f0f0f0;
+    padding: 20px 30px;
+    gap: 18rem;
+    position: relative;
+    width: 100%;
+  }
+  .logo{
+    position: relative;
+    right: 1rem;
+    top: 0.2rem;
+  }
+  .logo img{
+      height: 40px;
+  }
+  .logo h3{
+      position: relative;
+      bottom: 1.7rem;
+      left: 2.6rem;
+      font-size: 20px;
+      color: teal;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+  }
+  nav{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 2rem;
+      cursor: pointer;
+  }
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 60px;
+    right: 4rem;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    width: 300px;
+    height: 300px;
+    z-index: 1;
+  }
+  li{
+      list-style: none;
+      transition: color 0.3s ease;
+  }
+  li:hover{
+      color:rgb(238, 84, 28);
+  }
+  #menu-icon{
+    display: block;
+    color: teal;
+    position: relative;
+    top: 5px;
+    right: 23rem;
+}
+#close-icon{
+    display: none;
+    color: teal;
+    position: relative;
+    top: 5px;
+    right: 23rem;
+}
+  .icons{
+    display: block;
+  color: #008080;
+  font-size: 35px;
+  }
+  .nav-links button{
+      background:#ff6347;
+      position: relative;
+      top: 0.1rem;
+      left: 3.5rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .nav-links button:hover{
+      background-color: #008080;
+  }
+  .btn button{
+      background:linear-gradient(to left, #ff6347 ,#008080);
+      position: relative;
+      top: -0.7rem;
+      left: -0.5rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .btn button:hover{
+      background:linear-gradient(to right, #ff6347 ,#008080 );
+  }
+  /* hero section */
+  .hero{
+      background-image: url(./images/background\ 2.jpeg);
+      height: 85vh;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      text-align: center;
+      margin-top: 0;
+  }
+  .hero::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+  }
+  .hero-text{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      top: 10rem;
+      left: 2rem;
+      max-width: 80%;
+      text-align: center;
+      z-index: 2;
+  } 
+  .hero-text h1{
+      color: #fff;
+      font-size: 28px;
+      line-height: 30px;
+      text-transform: uppercase;
+      position: relative;
+      left: 1rem;
+  }
+  .hero-text h4{
+      color: #f5f2f2;
+      max-width: 120%;
+      line-height: 20px;
+      position: relative;
+      left: 2rem;
+      font-size: 12px;
+  }
+  
+  .hero-text button{
+      background:#ff6347;
+      position: relative;
+      top: -0.7rem;
+      left: 6rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .hero-text button:hover{
+      background-color: #008080;
+  }
+  
+}
+
+@media (min-width:501px) and (max-width: 700px){
+    /* header */
+header{
+    display: flex; 
+    flex-direction: row; 
+    height:100px ;
+    background:#f0f0f0;
+    padding: 20px 30px;
+    gap: 18rem;
+    position: relative;
+    width: 100%;
+  }
+  .logo{
+    position: relative;
+    left: -0.5rem;
+    top: 0.2rem;
+  }
+  .logo img{
+      height: 40px;
+  }
+  .logo h3{
+      position: relative;
+      bottom: 1.7rem;
+      left: 2.6rem;
+      font-size: 20px;
+      color: teal;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+  }
+  nav{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 2rem;
+      cursor: pointer;
+  }
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 80px;
+    right: -4rem;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+    width: 400px;
+    height: 300px;
+    z-index: 1;
+  }
+  li{
+      list-style: none;
+      transition: color 0.3s ease;
+  }
+  li:hover{
+      color:rgb(238, 84, 28);
+  }
+  #menu-icon{
+    display: block;
+    color: teal;
+    position: relative;
+    top: 1rem;
+    right: 15rem;
+}
+#close-icon{
+    display: none;
+    color: teal;
+    position: relative;
+    top: 1rem;
+    right: 15rem;
+}
+  .icons{
+    display: block;
+  color: #008080;
+  font-size: 35px;
+  }
+  .nav-links button{
+      background:#ff6347;
+      position: relative;
+      top: 0.1rem;
+      left: 7rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .nav-links button:hover{
+      background-color: #008080;
+  }
+  .btn button{
+      background:linear-gradient(to left, #ff6347 ,#008080);
+      position: relative;
+      top: -0.7rem;
+      left: -0.5rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .btn button:hover{
+      background:linear-gradient(to right, #ff6347 ,#008080 );
+  }
+  /* hero section */
+  .hero{
+      background-image: url(./images/background\ 2.jpeg);
+      height: 85vh;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      text-align: center;
+      margin-top: 0;
+  }
+  .hero::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+  }
+  .hero-text{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      top: 10rem;
+      left: 2rem;
+      max-width: 80%;
+      text-align: center;
+      z-index: 2;
+  } 
+  .hero-text h1{
+      color: #fff;
+      font-size: 40px;
+      line-height: 50px;
+      text-transform: uppercase;
+      position: relative;
+      left: 1rem;
+  }
+  .hero-text h4{
+      color: #f5f2f2;
+      max-width: 100%;
+      line-height: 20px;
+      position: relative;
+      left: 1rem;
+      font-size: 17px;
+  }
+  
+  .hero-text button{
+      background:#ff6347;
+      position: relative;
+      top: -0.7rem;
+      left: 10rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .hero-text button:hover{
+      background-color: #008080;
+  }
+
+}
+@media(min-width:701px) and (max-width:1000px){
+    /* header */
+header{
+    display: flex; 
+    flex-direction: row; 
+    height:100px ;
+    background:#f0f0f0;
+    padding: 20px 30px;
+    gap: 7rem;
+    z-index: 1000;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+  }
+  .logo{
+    position: relative;
+    right: 0.5rem;
+  }
+  .logo img{
+      height: 60px;
+  }
+  .logo h3{
+      position: relative;
+      bottom: 1.7rem;
+      left: 3.8rem;
+      font-size: 20px;
+      color: teal;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+  }
+  nav{
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 2rem;
+      cursor: pointer;
+  }
+  .nav-links{
+      display: flex;
+      gap: 2rem;
+      font-size: 12px;
+      text-transform: capitalize;
+      font-weight: 600;
+  }
+  li{
+      list-style: none;
+      transition: color 0.3s ease;
+  }
+  li:hover{
+      color:rgb(238, 84, 28);
+  }
+  .icons{
+  display: none;
+  }
+  .nav-links button{
+      background:#ff6347;
+      position: relative;
+      top: -0.7rem;
+      left: -0.5rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .nav-links button:hover{
+      background-color: #008080;
+  }
+  .btn button{
+      background:linear-gradient(to left, #ff6347 ,#008080);
+      position: relative;
+      top: -0.7rem;
+      left: 0.6rem;
+      height: 45px;
+      width: 130px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .btn button:hover{
+      background:linear-gradient(to right, #ff6347 ,#008080 );
+  }
+  /* hero section */
+  .hero{
+      background-image: url(./images/background\ 2.jpeg);
+      height: 80vh;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      text-align: center;
+      margin-top: 0;
+  }
+  .hero::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+  }
+  .hero-text{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      top: 15rem;
+      left: 5rem;
+      max-width: 80%;
+      text-align: center;
+      z-index: 2;
+  } 
+  .hero-text h1{
+      color: #fff;
+      font-size: 60px;
+      line-height: 70px;
+      text-transform: uppercase;
+  }
+  .hero-text h4{
+      color: #f5f2f2;
+      max-width: 100%;
+      line-height: 36px;
+      position: relative;
+      left: 3rem;
+      font-size: 22px;
+  }
+  
+  .hero-text button{
+      background:#ff6347;
+      position: relative;
+      top: -0.7rem;
+      left: 18rem;
+      height: 50px;
+      width: 150px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: capitalize;
+      transition: background-color 0.3s ease;
+  }
+  .hero-text button:hover{
+      background-color: #008080;
+  }
+  
+}
+
