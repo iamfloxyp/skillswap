@@ -204,16 +204,16 @@ header{
   .nav-links{
     display: none;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     position: absolute;
     top: 60px;
-    right: 4rem;
+    right: -1.5rem;
     background-color: #fff;
     padding: 20px;
     text-align: center;
     font-size: 15px;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     z-index: 1;
   }
   li{
@@ -246,7 +246,7 @@ header{
       background:#ff6347;
       position: relative;
       top: 0.1rem;
-      left: 3.5rem;
+      left: 7rem;
       height: 45px;
       width: 130px;
       font-weight: 700;
