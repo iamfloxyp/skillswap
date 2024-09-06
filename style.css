@@ -8,7 +8,7 @@ body{
     min-height: 100%;
     overflow-x: hidden;
     font-family: "montserrat", 'sans-serif';
-    background: #BDC3C7;
+    background: #eef1f3;
 }
 
 /* header */
@@ -53,9 +53,18 @@ nav{
 }
 li{
     list-style: none;
-    transition: color 0.3s ease;
+    
 }
 li:hover{
+    color:rgb(238, 84, 28);
+    
+}
+a{
+    color:black ;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover{
     color:rgb(238, 84, 28);
 }
 .icons{
@@ -100,7 +109,7 @@ display: none;
 /* hero section */
 .hero{
     background-image: url(./images/background\ 2.jpeg);
-    height: 80vh;
+    height: 85vh;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -161,6 +170,223 @@ display: none;
 }
 .hero-text button:hover{
     background-color: #008080;
+}
+
+/* About Section Styles */
+.about {
+    padding: 50px;
+    text-align: center;
+}
+
+.about-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #008080; 
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #333;
+    width: 60%;
+    position: relative;
+    left: 14rem;
+    line-height: 30px;
+}
+.mission-vision{
+    display: flex;
+    padding: 60px;
+}
+.mission-text{
+    min-width:50% ;
+}
+.mission-vision h2 {
+    font-size: 30px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.mission-vision p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.mission-image{
+    min-width: 50%;
+}
+.mission-image img{
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+
+.our-vision{
+    display: flex;
+    padding: 60px;
+}
+.vision-text{
+    min-width:50% ;
+}
+.vision-text h2 {
+    font-size: 30px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.vision-text p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.vision-image{
+    min-width: 50%;
+}
+.vision-image img{
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.core-values {
+    margin-top: 80px;
+}
+.core-values h2 {
+    font-size: 30px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.core-values .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    border-radius: 10px;
+    
+}
+.value-item{
+    position: relative;
+    left: 5rem;
+    top: 3rem;
+    height: 200px;
+    width:500px ;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    display: flex;
+    flex-direction:column ;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.value-item:hover{
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    transform: scale(1.05);
+}
+.value-item i{
+    font-size: 50px;
+    position: relative;
+    top: 1rem;
+    color: #ff6347;
+}
+.value-item h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    top: 2rem;
+    color: #008080;
+}
+
+.value-item p {
+    color: #555;
+    width: 80%;
+    position: relative;
+    left: 3rem;
+    top: 2rem;
+}
+
+.story-section {
+    position: relative;
+    top: 8rem;
+}
+.story-contentbox{
+    display: flex;
+    position: relative;
+    top: 4rem;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 3rem;
+}
+
+.story-section .image {
+    width: 40%;
+    border-radius: 10px;
+}
+.story-section .image img{
+    height: 400px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.story-section h2{
+    color: #008080;
+    font-size: 30px;
+}
+.story-content p{
+    width:60% ;
+    position: relative;
+    left: 4rem;
+    line-height: 30px;
+}
+.cta-section {
+    position: relative;
+    top: 1rem;
+    left: 10rem;
+    display: flex;
+    
+}
+.cta-section h2{
+    font-size: 20px;
+    position: relative;
+    right: 4rem;
+    top: 1rem;
+    width: 150px;
+}
+
+.cta-section button{
+    background:linear-gradient(to left, #ff6347 ,#008080);
+    position: relative;
+    top: 0.5rem;
+    right: 1rem;
+    height: 45px;
+    width: 130px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+.cta-section button:hover{
+    background:linear-gradient(to right, #ff6347 ,#008080 );
+}
+
+.cta-btn:hover {
+    background-color: #E55B50; 
 }
 
 /*****************  media query****************/
@@ -346,6 +572,244 @@ header{
       background-color: #008080;
   }
   
+  /* About Section Styles */
+.about {
+    position: relative;
+    top: 2rem;
+}
+
+.about-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: #008080; 
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    color: #333;
+    width: 100%;
+    position: relative;
+    left: 1rem;
+    line-height: 30px;
+}
+.mission-vision{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+.mission-text{
+    min-width:100% ;
+}
+.mission-vision h2 {
+    font-size: 25px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.mission-vision p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+    width: 350px;
+    position: relative;
+    right: 4rem;
+}
+.mission-image{
+    min-width: 100%;
+    position: relative;
+    right: 6rem;
+}
+.mission-image img{
+    height: 300px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+
+.our-vision{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+.vision-text{
+    min-width:100% ;
+}
+.vision-text h2 {
+    font-size: 25px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.vision-text p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+    width: 350px;
+    position: relative;
+    right: 4rem;
+}
+.vision-image{
+    min-width: 100%;
+    position: relative;
+    right:6rem ;
+}
+.vision-image img{
+    height: 300px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.core-values {
+    margin-top: 40px;
+}
+.core-values h2 {
+    font-size: 25px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.core-values .values-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    border-radius: 10px;
+    
+}
+.value-item{
+    position: relative;
+    left:1rem;
+    top: 3rem;
+    height: 200px;
+    width:300px ;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    display: flex;
+    flex-direction:column ;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.value-item:hover{
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    transform: scale(1.05);
+}
+.value-item i{
+    font-size: 30px;
+    position: relative;
+    top: 0.6rem;
+    color: #ff6347;
+}
+.value-item h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    top: 1.5rem;
+    color: #008080;
+}
+
+.value-item p {
+    color: #555;
+    width: 80%;
+    position: relative;
+    left: 2rem;
+    top: 1.5rem;
+}
+
+.story-section {
+    position: relative;
+    top: 8rem;
+}
+.story-contentbox{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 2rem;
+}
+.story-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 3rem;
+}
+
+.story-section .image {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    top: 3rem;
+    right: 2.5rem;
+}
+.story-section .image img{
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+}
+.story-section h2{
+    color: #008080;
+    font-size: 30px;
+}
+.story-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 6rem;
+}
+.story-content p{
+    width:350px ;
+    position: relative;
+    right: 4rem;
+    line-height: 30px;
+}
+.cta-section {
+    position: relative;
+    top: 1rem;
+    right: 28rem;
+    display: flex;
+    
+}
+.cta-section h2{
+    font-size: 20px;
+    position: relative;
+    right: 7rem;
+    top: 1rem;
+    width: 150px;
+}
+
+.cta-section button{
+    background:linear-gradient(to left, #ff6347 ,#008080);
+    position: relative;
+    top: 0.5rem;
+    right: 4rem;
+    height: 45px;
+    width: 130px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+.cta-section button:hover{
+    background:linear-gradient(to right, #ff6347 ,#008080 );
+}
+
+.cta-btn:hover {
+    background-color: #E55B50; /* Darker Coral on hover */
+}
 }
 
 @media (min-width:501px) and (max-width: 700px){
@@ -530,6 +994,245 @@ header{
       background-color: #008080;
   }
 
+   /* About Section Styles */
+.about {
+    position: relative;
+    top: 2rem;
+}
+
+.about-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    color: #008080; 
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #333;
+    width: 100%;
+    position: relative;
+    left: -1rem;
+    line-height: 30px;
+}
+.mission-vision{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+.mission-text{
+    min-width:100% ;
+}
+.mission-vision h2 {
+    font-size: 25px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.mission-vision p {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+    width: 400px;
+    position: relative;
+    right: 4rem;
+}
+.mission-image{
+    min-width: 100%;
+    position: relative;
+    right: 6rem;
+}
+.mission-image img{
+    height: 350px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+
+.our-vision{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+.vision-text{
+    min-width:100% ;
+}
+.vision-text h2 {
+    font-size: 25px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.vision-text p {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+    width: 400px;
+    position: relative;
+    right: 4rem;
+}
+.vision-image{
+    min-width: 100%;
+    position: relative;
+    right:6rem ;
+}
+.vision-image img{
+    height: 350px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.core-values {
+    margin-top: 40px;
+}
+.core-values h2 {
+    font-size: 25px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.core-values .values-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    border-radius: 10px;
+    
+}
+.value-item{
+    position: relative;
+    left:1rem;
+    top: 3rem;
+    height: 250px;
+    width:400px ;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    display: flex;
+    flex-direction:column ;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.value-item:hover{
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    transform: scale(1.05);
+}
+.value-item i{
+    font-size: 35px;
+    position: relative;
+    top: 1rem;
+    color: #ff6347;
+}
+.value-item h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    top: 1.5rem;
+    color: #008080;
+}
+
+.value-item p {
+    color: #555;
+    width: 80%;
+    position: relative;
+    left: 2rem;
+    top: 2rem;
+}
+
+.story-section {
+    position: relative;
+    top: 8rem;
+}
+.story-contentbox{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 1rem;
+}
+.story-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 3rem;
+}
+
+.story-section .image {
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+    top: 3rem;
+    right: 2.5rem;
+}
+.story-section .image img{
+    height: 400px;
+    width: 500px;
+    border-radius: 10px;
+}
+.story-section h2{
+    color: #008080;
+    font-size: 30px;
+}
+.story-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 6rem;
+}
+.story-content p{
+    width:400px ;
+    position: relative;
+    right: 4rem;
+    line-height: 30px;
+}
+.cta-section {
+    position: relative;
+    top: 1rem;
+    right: 28rem;
+    display: flex;
+    
+}
+.cta-section h2{
+    font-size: 20px;
+    position: relative;
+    right: 7rem;
+    top: 1rem;
+    width: 150px;
+}
+
+.cta-section button{
+    background:linear-gradient(to left, #ff6347 ,#008080);
+    position: relative;
+    top: 0.5rem;
+    right: 4rem;
+    height: 45px;
+    width: 130px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+.cta-section button:hover{
+    background:linear-gradient(to right, #ff6347 ,#008080 );
+}
+
+.cta-btn:hover {
+    background-color: #E55B50; /* Darker Coral on hover */
+}
+
 }
 @media(min-width:701px) and (max-width:1000px){
     /* header */
@@ -625,7 +1328,7 @@ header{
   /* hero section */
   .hero{
       background-image: url(./images/background\ 2.jpeg);
-      height: 80vh;
+      height: 90vh;
       width: 100%;
       background-repeat: no-repeat;
       background-size: cover;
@@ -688,6 +1391,231 @@ header{
   .hero-text button:hover{
       background-color: #008080;
   }
+
+  .about {
+    padding: 50px;
+    text-align: center;
+}
+
+.about-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #008080; 
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #333;
+    width: 100%;
+    position: relative;
+    left: 1rem;
+    line-height: 30px;
+}
+.mission-vision{
+    display: flex;
+    padding: 60px;
+    position: relative;
+    right: 4rem;
+}
+.mission-text{
+    min-width:50% ;
+}
+.mission-vision h2 {
+    font-size: 30px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.mission-vision p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.mission-image{
+    min-width: 50%;
+}
+.mission-image img{
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;
+}
+
+
+.our-vision{
+    display: flex;
+    padding: 60px;
+}
+.vision-text{
+    min-width:50% ;
+    position: relative;
+    left: 7rem;
+}
+.vision-text h2 {
+    font-size: 30px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.vision-text p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+.vision-image{
+    min-width: 50%;
+    position: relative;
+    right: 6rem;
+}
+.vision-image img{
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;  
+}
+
+.core-values {
+    margin-top: 80px;
+}
+.core-values h2 {
+    font-size: 30px;
+    color: #008080; 
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+.core-values .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    border-radius: 10px;
+    
+}
+.value-item{
+    position: relative;
+    left: -0.7rem;
+    top: 3rem;
+    height: 200px;
+    width:350px ;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    display: flex;
+    flex-direction:column ;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.value-item:hover{
+    border-image: linear-gradient(135deg, #008080, #FF6F61) 1;
+    transform: scale(1.05);
+}
+.value-item i{
+    font-size: 50px;
+    position: relative;
+    top: 1rem;
+    color: #ff6347;
+}
+.value-item h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    top: 1.5rem;
+    color: #008080;
+}
+
+.value-item p {
+    color: #555;
+    width: 80%;
+    position: relative;
+    left: 3rem;
+    top: 1.5rem;
+}
+
+.story-section {
+    position: relative;
+    top: 8rem;
+}
+.story-contentbox{
+    display: flex;
+    position: relative;
+    top: 4rem;
+    left: 2rem;
+}
+
+.story-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: -1rem;
+}
+
+.story-section .image {
+    width: 40%;
+    border-radius: 10px;
+}
+.story-section .image img{
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    position: relative;
+    right: 6rem;
+}
+
+.story-section h2{
+    color: #008080;
+    font-size: 30px;
+}
+.story-content p{
+    width:80% ;
+    position: relative;
+    left: -3rem;
+    line-height: 30px;
+}
+.cta-section {
+    position: relative;
+    top: 1rem;
+    left: 10rem;
+    display: flex;
+    
+}
+.cta-section h2{
+    font-size: 20px;
+    position: relative;
+    right: 12rem;
+    top: 1rem;
+    width: 150px;
+}
+
+.cta-section button{
+    background:linear-gradient(to left, #ff6347 ,#008080);
+    position: relative;
+    top: 0.5rem;
+    right: 10rem;
+    height: 45px;
+    width: 130px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease;
+}
+.cta-section button:hover{
+    background:linear-gradient(to right, #ff6347 ,#008080 );
+}
+
+.cta-btn:hover {
+    background-color: #E55B50; 
+}
   
 }
 
