@@ -33,17 +33,28 @@ const currentYear = new Date().getFullYear();
 document.getElementById("year").textContent = currentYear;
 
 // toggle button for the password
-function togglePassword(inputId) {
-  const input = document.getElementById(inputId);
-  const icon = input.nextElementSibling.querySelector('i');
+// function togglePassword(inputId) {
+//   const input = document.getElementById(inputId);
+//   const icon = input.nextElementSibling.querySelector('i');
 
-  if (input.type === 'password') {
-      input.type = 'text';
-      icon.classList.remove('fa-eye-slash');
-      icon.classList.add('fa-eye');
-  } else {
-      input.type = 'password';
-      icon.classList.remove('fa-eye');
-      icon.classList.add('fa-eye-slash');
-  }
+//   if (input.type === 'password') {
+//       input.type = 'text';
+//       icon.classList.remove('fa-eye-slash');
+//       icon.classList.add('fa-eye');
+//   }
+//    else {
+//       input.type = 'password';
+//       icon.classList.remove('fa-eye');
+//       icon.classList.add('fa-eye-slash');
+//   }
+// }
+function togglePassword(inputId) {
+  const passwordField = document.getElementById(inputId);
+  const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+  passwordField.setAttribute('type', type);
+  
+  // Toggle the icon
+  const toggleIcon = passwordField.nextElementSibling.querySelector('i');
+  toggleIcon.classList.toggle('fa-eye');
+  toggleIcon.classList.toggle('fa-eye-slash');
 }

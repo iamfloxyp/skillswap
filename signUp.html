@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="firebase.js"></script>
     <title>SignUp page</title>
 </head>
 <body>
@@ -28,42 +29,45 @@
         </div>
         <div class="signUp-box">
             <h1>Get Started</h1>
-            <form action="" class="signup-form">
+            <form id="signup-form">
                 <label for="fullname">Full Name</label>
-                <input type="text" name="name" id="name" placeholder="Enter full name" required>
+                <input type="text" name="name" id="signup-name" placeholder="Enter full name" required>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                <input type="email" name="email" id="signup-email" placeholder="Enter Email" required>
                 <label for="password">Password</label>
                 <div class="input-container">
-                    <input type="password" name="password" id="password" placeholder="Enter password" required>
-                    <span class="toggle-password" onclick="togglePassword('password')">
-                        <i class="fa fa-eye-slash" ></i>
+                    <input type="password" name="password" id="signup-password" placeholder="Enter password" required>
+                    <span class="toggle-password" onclick="togglePassword('signup-password')">
+                    <i class="fa fa-eye-slash"></i>
                     </span>
                 </div>
-                <label for="password"> Comfirm Password</label>
+                <label for="confirm-password">Confirm Password</label>
                 <div class="input-container">
-                    <input type="comfirm-password" name="comfirm-password" id="comfirm-password" placeholder="Enter password" required>
-                    <span class="toggle-password" onclick="togglePassword('comfirm-password')">
-                        <i class="fa fa-eye-slash" ></i>
-                    </span>
+                    <input type="comfirm-password" name="confirm-password" id="signup-confirm-password" placeholder="Confirm password" required>
+                    <span class="toggle-password" onclick="togglePassword('signup-confirm-password')">
+                        <i class="fa fa-eye-slash"></i>
+                        </span>
                 </div>
-
                 <button type="submit">Sign Up</button>
             </form>
+
             <div class="divider">
                 <span>Sign up with</span>
-               
             </div>
             <div class="signUp-icons">
-                <i class="fa fa-facebook"></i>
-                <i class="fa fa-twitter"></i>
-                <i class="fa fa-google"></i>
+                <button id="google-signin"><i class="fa fa-facebook"></i> </button>
+                <button id="google-signin"><i class="fa fa-twitter"></i></button>
+                <button id="google-signin"><i class="fa fa-google"></i></button>
             </div>
             <div class="signUp-no">
-                <p>Already gave an account? <a href="login.html">Sign In</a></p>
+                <p>Don't have an account? <a href="login.html">Sign In</a></p>
             </div>
         </div>
     </div>
-    <script src="./index.js"></script>
+
+    <script type="module" src="./index.js"></script>
+    <script src="firebase.js"></script>
+
+   
 </body>
 </html>

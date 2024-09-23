@@ -1232,6 +1232,9 @@ form button:hover {
     justify-content: center;
     gap: 1rem;
 }
+.signUp-icons button{
+    border: none;
+}
 
 .signUp-icons i {
     font-size: 20px;
