@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>${profile.fullName}</h2>
                 <p>Location: ${profile.location}</p>
                 <p>Skills: ${profile.skills}</p>
-                <button class="chat-button">Chat</button>
+                <button id="chatBtnProfile" class ="chat-button">Chat</button>
                 <button id="backButton" class="back-button">Back to Skills</button>
             </div>
         `;
@@ -84,7 +84,16 @@ document.addEventListener('DOMContentLoaded', () => {
             profileContainer.innerHTML = ''; // Clear profile display
             skillsGrid.style.display = 'grid'; // Show skills grid again
         });
+        const chatBtn = document.getElementById('chatBtnProfile');
+        chatBtn.addEventListener('click', () => {
+            // Option 1: Just go to chat page with no extra info
+            window.location.href = 'chat.html';
+
+            
+        });
     }
+    
+    
 
     // Initial load of skills
     displaySkills(skills);
