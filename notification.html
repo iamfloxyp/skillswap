@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#skills"><i class="fas fa-list"></i> Skill Listings</a></li>
+                <li><a href="#chat"><i class="fas fa-comments"></i> Chat</a></li>
+                <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="#notifications" class="active"><i class="fas fa-bell"></i> Notifications</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-bottom">
+            <ul>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="notifications-header">
+            <h1>Notifications</h1>
+            <p>Stay up-to-date with the latest updates and alerts</p>
+        </header>
+
+        <div class="notifications-container">
+            <!-- Notification 1 -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>Welcome to SkillSwap!</h3>
+                    <p>Get started by exploring skill listings or connecting with other users.</p>
+                    <span class="notification-time">2 hours ago</span>
+                </div>
+            </div>
+
+            <!-- Notification 2 -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>New Message from John</h3>
+                    <p>"Hi, I'm interested in swapping skills with you. Let's connect!"</p>
+                    <span class="notification-time">5 hours ago</span>
+                </div>
+            </div>
+
+            <!-- Notification 3 -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>Profile Update Reminder</h3>
+                    <p>Complete your profile to increase your visibility in the SkillSwap community.</p>
+                    <span class="notification-time">1 day ago</span>
+                </div>
+            </div>
+
+            <!-- Notification 4 -->
+            <div class="notification-card">
+                <div class="notification-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="notification-content">
+                    <h3>Skill Listing Expired</h3>
+                    <p>Your skill listing "Graphic Design Basics" has expired. Renew it to stay visible.</p>
+                    <span class="notification-time">2 days ago</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="notifications.js"></script>
+</body>
+</html>

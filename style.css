@@ -1135,7 +1135,7 @@ footer .logo h3{
     flex-direction: column;
 }
 
-h1 {
+.signUp-box h1 {
     font-size: 24px;
     color: #008080;
 }
@@ -1527,6 +1527,7 @@ p {
 .back-to-login a:hover {
     text-decoration: underline;
 }
+
 /*****************  media query****************/
 @media (min-width:340px) and (max-width: 500px){
     /* header */
@@ -2339,6 +2340,21 @@ header{
 }
 .news-container button:hover{
     background:linear-gradient(to right, #ff6347 ,#008080 );
+}
+.forget-password-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    left: 0rem;
 }
 }
 
@@ -3153,7 +3169,21 @@ header{
 .news-container button:hover{
     background:linear-gradient(to right, #ff6347 ,#008080 );
 }
-
+.forget-password-container {
+    width: 100%;
+    max-width: 550px;
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    left: 0rem;
+}
 }
 @media(min-width:701px) and (max-width:1000px){
     /* header */

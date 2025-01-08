@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSwap Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.x.x/firebase-auth.js"></script>
+    <link rel="stylesheet" href="dashboard.css">
+  <script defer src="script.js"></script>
+  <!-- Icons from Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="dashboard.html"><i class="fas fa-user"></i> Profile</a></li>
+        <li><a href="skill.html"><i class="fas fa-list"></i> Skill Listings</a></li>
+        <li><a href="#chat"><i class="fas fa-comments"></i> Chat</a></li>
+        <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-bottom">
+      <ul>
+        <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+        <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+        <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content">
+    <!-- Profile Section -->
+    <section id="profile">
+      <div class="profile-container">
+        <div class="profile-picture">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.g1m0K7yumfwkc_ub224a4AHaE7&pid=Api&P=0&h=220" alt="Profile Picture" id="profileImg">
+          <div class="profile-btn">
+            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            <button id="editBtn">Edit Profile Picture</button>
+          <button id="avatarBtn">Use Avatar</button>
+          </div>
+        </div>
+        <!-- Avatar selection modal -->
+<div id="avatarModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span id="closeModal" style="cursor:pointer;">&times;</span>
+        <h2>Select an Avatar</h2>
+        <div id="avatarContainer"></div>
+    </div>
+</div>
+
+        <div class="profile-info" id="profile-info">
+          <h2>Profile Information</h2>
+          <form>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Full Name">
+            
+            <label for="gender">Gender</label>
+            <select id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="non-binary">Non-binary</option>
+            </select>
+
+            <label for="location">Country</label>
+            <select id="country" >
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="UK">UK</option>
+              <option value="India">India</option>
+              <!-- More countries here -->
+            </select>
+
+            <label for="role">Role</label>
+            <select id="role">
+              <option value="role">Select a tech role</option>
+            </select>
+            
+            <label for="Looking for">Looking For</label>
+            <select id="looking-for">
+              <option value="role">Select what you are looking for</option>
+            </select>
+            
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username">
+
+            <div class="profile-buttons">
+              <button type="button">Edit</button>
+              <button type="submit">Save Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Theme and Appearance Section -->
+      <div class="theme-section" id="theme-section">
+        <h2>Theme and Appearance</h2>
+        <div class="theme-toggle">
+          <button id="light-theme" class="theme-btn">Light Theme</button>
+          <button id="dark-theme" class="theme-btn">Dark Theme</button>
+        </div>
+      </div>
+
+      <!-- Account Settings Section -->
+      <div class="account-settings" id="account-settings">
+        <h3>Account Settings</h3>
+        <form>
+          <label for="email">Change Email</label>
+          <input type="email" id="email" placeholder="Change Email" disabled>
+          
+          <label for="password">Change Password</label>
+          
+          <input type="password" id="password" placeholder="Change Password" disabled>
+          <div class="account-button">
+            <button type="submit" id="edit-button"  class="form-btn">Edit</button>
+            <button type="submit" class="form-btn" id="save-button">Save Changes</button>
+          </div>
+        </form>
+
+        <div class="deactivate-section">
+          <h4>Deactivate Account</h4>
+          <button class="deactivate-button">Deactivate Account</button>
+        </div>
+        <!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal-confirm">
+    <div class="modal-confirmContent">
+        <h5>Are you sure you want to deactivate your account?</h5>
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+</div>
+
+<!-- Deactivation Success Modal -->
+<div id="deactivationModal" class="modal-confirm">
+    <div class="modal-confirmContent">
+        <h5>Your account has been deactivated.</h5>
+        <a href="goodbye.html" id="redirectLink">Go to Goodbye Page</a>
+    </div>
+</div>
+      </div>
+    </section>
+  </main>
+  <script src="./dashboard.js"></script>
+  <script src="firebase.js"></script>
+
+</body>
+</html>
+

@@ -21,9 +21,25 @@ async function signUpWithEmail(email, password, fullName) {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
 
+        localStorage.setItem( 'signupEmail',email)
+        localStorage.setItem('signupPassword',password)
+
+        // Clear profile data and profile image for new users
+        const profileData = {
+            fullName: '',       // Empty full name
+            gender: '',         // Empty gender
+            country: '',        // Empty country
+            role: '',           // Empty role
+            lookingFor: '',     // Empty lookingFor
+            username: ''        // Empty username
+        };
+        localStorage.setItem('profileData', JSON.stringify(profileData));
+        localStorage.setItem('profileImage', ''); // No profile image for new users
+        localStorage.setItem('imageType', 'none'); // No image type set
+
         await sendEmailVerification(user);
         alert("A verification email has been sent. Please verify your email to complete the sign-up process.");
-        window.location.href = 'login.html';
+        window.location.href = 'dashboard.html';
     } catch (error) {
         console.error(error);
         alert(error.message);

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-top">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="dashboard.html"><i class="fas fa-user"></i> Profile</a></li>
+                <li><a href="#skills"><i class="fas fa-list"></i> Skill Listings</a></li>
+                <li><a href="#chat"><i class="fas fa-comments"></i> Chat</a></li>
+                <li><a href="#blog" class="active"><i class="fas fa-blog"></i> Blog</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-bottom">
+            <ul>
+                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search for blog posts...">
+        </div>
+    
+        <div class="blog-grid" id="blog-grid">
+            <!-- Blog Post 1 -->
+            <div class="blog-card">
+                <img src="./images/exchage1.jpg" alt="Blog Post Image" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">How to Swap Skills Efficiently</h3>
+                    <p class="blog-excerpt">Learn the best practices to trade your skills effectively with others in the SkillSwap community...</p>
+                    <a href="post1.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- Blog Post 2 -->
+            <div class="blog-card">
+                <img src="./images/networking.jpg" alt="Blog Post Image" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">The Art of Networking</h3>
+                    <p class="blog-excerpt">Explore tips on how to build connections that help you grow personally and professionally...</p>
+                    <a href="post2.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- Blog Post 3 -->
+            <div class="blog-card">
+                <img src="./images/skills learn.jpg" alt="Blog Post Image" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">Top Skills to Learn in 2024</h3>
+                    <p class="blog-excerpt">Discover the trending skills that will make you stand out in the upcoming year...</p>
+                    <a href="post3.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- Blog Post 4 -->
+            <div class="blog-card">
+                <img src="./images/skill swap.jpg" alt="Blog Post Image" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">Why Skill Swapping is the Future</h3>
+                    <p class="blog-excerpt">Skill swapping offers a unique way to exchange value without monetary transactions. Learn how to get started...</p>
+                    <a href="post4.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- Blog Post 5 -->
+            <div class="blog-card">
+                <img src="./images/maxi,ize skills.jpg" alt="Blog Post Image" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">Maximizing Your Skills</h3>
+                    <p class="blog-excerpt">Uncover tips and strategies to leverage your skills and make the most out of skill swapping...</p>
+                    <a href="post5.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+    
+            <!-- Blog Post 6 -->
+            <div class="blog-card">
+                <img src="./images/community building.jpg" alt="Blog Post Image" class="blog-image">
+                <div class="blog-content">
+                    <h3 class="blog-title">How to Build a Community</h3>
+                    <p class="blog-excerpt">Building a thriving community is essential for success. Here’s how to create and grow your network...</p>
+                    <a href="post6.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script defer src="blog.js"></script>
+</body>
+</html>

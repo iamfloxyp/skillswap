@@ -1,3 +1,23 @@
+// buttons toggle
+document.getElementById('getStarted').addEventListener('click', function() {
+  window.location.href = 'signUp.html';
+});
+// hero section
+document.getElementById('getStartedHero').addEventListener('click', function() {
+  window.location.href = 'signUp.html';
+});
+// story section
+document.getElementById('getStartedStory').addEventListener('click', function() {
+  window.location.href = 'signUp.html';
+});
+// how it works
+document.getElementById('getStartedHow').addEventListener('click', function() {
+  window.location.href = 'signUp.html';
+});
+document.getElementById('loginBtn').addEventListener('click', function() {
+  window.location.href = 'login.html';
+});
+
 // Navbar toggling
 const menuIcon = document.getElementById('menu-icon');
 const closeIcon = document.getElementById('close-icon');
