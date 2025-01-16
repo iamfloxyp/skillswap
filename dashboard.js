@@ -17,7 +17,22 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
         reader.readAsDataURL(file); // Read the file as a data URL
     }
 });
-
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("sidebar");
+    const hamburgerMenu = document.getElementById("hamburger-menu");
+  
+    // Toggle sidebar on hamburger menu click
+    hamburgerMenu.addEventListener("click", () => {
+      sidebar.classList.toggle("active"); // Add or remove "active" class
+  
+      // Toggle icons between hamburger and times
+      if (sidebar.classList.contains("active")) {
+        hamburgerMenu.innerHTML = '<i class="fas fa-times"></i>'; // Show times icon
+      } else {
+        hamburgerMenu.innerHTML = '<i class="fas fa-bars"></i>'; // Show hamburger icon
+      }
+    });
+  });
 // Open avatar modal and generate avatars
 document.getElementById('avatarBtn').addEventListener('click', function() {
     document.getElementById('avatarModal').style.display = "block";

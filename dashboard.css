@@ -7,13 +7,71 @@ body {
   }
   
   .sidebar {
+   
     background-color: #008080;
     width: 250px;
+   
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  
   }
+  .sidebar.active{
+    left: 0;
+  }
+  /* Hamburger menu styles */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100;
+  color: white;
+  background-color: #008080;
+}
+
+.hamburger-menu i {
+  pointer-events: none;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 340px) and (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .sidebar{
+    display: none;
+  }
+.sidebar.active{
+  display: block;
+}
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sidebar ul li {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  .sidebar.active{
+    left: 0;
+  }
+}
+
+
   
   .sidebar ul {
     list-style-type: none;
@@ -315,16 +373,88 @@ body {
   .modal-confirm button:hover{
     background-color: #008080;
   }
-/* skills page */
-/* Main Content */
-.main-content {
-  /* margin-left: 220px; */
-  padding: 20px;
-  width: calc(100% - 220px);
-}
+  @media (min-width: 340px) and (max-width: 500px) {
+    /* Ensure the main content is scrollable */
+    .main-content {
+      overflow-y: auto; /* Enable vertical scrolling */
+      height: calc(100vh - 50px); /* Adjust height based on viewport minus any fixed elements (like header or hamburger menu) */
+      padding: 10px;
+      box-sizing: border-box;
+    }
+  
+    /* Profile container in a column layout for smaller screens */
+    .profile-container {
+      flex-direction: column; /* Stack elements vertically */
+      gap: 20px; /* Add space between elements */
+      align-items: center; /* Center align items */
+    }
+  
+    /* Ensure profile picture is smaller and centered */
+    .profile-picture img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    /* Reduce form input widths for smaller screens */
+    .profile-info form input,
+    .profile-info form select {
+      width: 100%; /* Full width on small screens */
+      margin-top: 5px;
+    }
+  
+    /* Reduce padding for forms */
+    .profile-info {
+      padding: 15px;
+    }
+  
+    /* Center buttons and make them full-width for smaller screens */
+    .profile-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .profile-buttons button {
+      width: 100%; /* Full-width buttons */
+    }
+  
+    /* Theme Section adjustments */
+    .theme-section {
+      padding: 10px;
+      margin-top: 20px;
+    }
+  
+    .theme-btn {
+      padding: 10px;
+      font-size: 14px;
+      width: 100%; /* Full-width buttons */
+      margin: 5px 0;
+    }
+  
+    /* Account Settings adjustments */
+    .account-settings {
+      padding: 10px;
+      margin-top: 20px;
+    }
+  
+    .account-settings input {
+      width: 100%; /* Full width on small screens */
+    }
+  
+    .deactivate-button {
+      width: 100%; /* Full width button */
+    }
+  
+    /* Modal adjustments for small screens */
+    .modal-content {
+      width: 90%; /* Make modal fit smaller screens */
+    }
+  }
 
+  /* Skills */
 .search-bar {
-  margin-bottom: 20px;
+bottom: 0.5rem;
+  position: relative;
+  left: 3rem;
 }
 
 .search-bar input {
@@ -335,7 +465,99 @@ body {
   border-radius: 5px;
 }
 
-/* Skills Grid */
+.sidebar-1 {
+   
+  background-color: #008080;
+  width: 250px;
+ 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.sidebar-1.active{
+  left: 0;
+}
+/* Hamburger menu styles */
+.hamburger-menu-1 {
+display: none;
+position: fixed;
+top: 20px;
+left: 20px;
+font-size: 24px;
+cursor: pointer;
+z-index: 1100;
+color: white;
+background-color: #008080;
+}
+
+.hamburger-menu-1 i {
+pointer-events: none;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 340px) and (max-width: 768px) {
+.hamburger-menu-1 {
+  display: block;
+}
+.sidebar-1{
+  display: none;
+}
+.sidebar-1.active{
+display: block;
+}
+.sidebar-1 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-1 ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-1 ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.sidebar-1.active{
+  left: 0;
+}
+}
+
+
+
+.sidebar-1 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-1 ul li {
+  margin: 30px 0;
+}
+
+.sidebar-1 ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.sidebar-1 ul li a i {
+  margin-right: 10px;
+}
+
+.sidebar-1 ul li a:hover {
+  background-color:#043030;
+  border-radius: 5px;
+}
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -401,6 +623,99 @@ body {
 }
 
 /* blog section */
+.sidebar-2 {
+   
+  background-color: #008080;
+  width: 250px;
+ 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.sidebar-2.active{
+  left: 0;
+}
+/* Hamburger menu styles */
+.hamburger-menu-2 {
+display: none;
+position: fixed;
+top: 20px;
+left: 20px;
+font-size: 24px;
+cursor: pointer;
+z-index: 1100;
+color: white;
+background-color: #008080;
+}
+
+.hamburger-menu-2 i {
+pointer-events: none;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 340px) and (max-width: 768px) {
+.hamburger-menu-2 {
+  display: block;
+}
+.sidebar-2{
+  display: none;
+}
+.sidebar-2.active{
+display: block;
+}
+.sidebar-2 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-2 ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-2 ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.sidebar-2.active{
+  left: 0;
+}
+}
+
+
+
+.sidebar-2 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-2 ul li {
+  margin: 30px 0;
+}
+
+.sidebar-2 ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.sidebar-2 ul li a i {
+  margin-right: 10px;
+}
+
+.sidebar-2 ul li a:hover {
+  background-color:#043030;
+  border-radius: 5px;
+}
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -449,6 +764,99 @@ body {
 }
 
 /* notification */
+.sidebar-3 {
+   
+  background-color: #008080;
+  width: 250px;
+ 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.sidebar-3.active{
+  left: 0;
+}
+/* Hamburger menu styles */
+.hamburger-menu-3 {
+display: none;
+position: fixed;
+top: 20px;
+left: 20px;
+font-size: 24px;
+cursor: pointer;
+z-index: 1100;
+color: white;
+background-color: #008080;
+}
+
+.hamburger-menu-3 i {
+pointer-events: none;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 340px) and (max-width: 768px) {
+.hamburger-menu-3 {
+  display: block;
+}
+.sidebar-3{
+  display: none;
+}
+.sidebar-3.active{
+display: block;
+}
+.sidebar-3 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-3 ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-3 ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.sidebar-3.active{
+  left: 0;
+}
+}
+
+
+
+.sidebar-3 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-3 ul li {
+  margin: 30px 0;
+}
+
+.sidebar-3 ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.sidebar-3 ul li a i {
+  margin-right: 10px;
+}
+
+.sidebar-3 ul li a:hover {
+  background-color:#043030;
+  border-radius: 5px;
+}
 .notifications-header {
   text-align: center;
   margin-bottom: 30px;
@@ -502,8 +910,140 @@ body {
   font-size: 14px;
   color: #999;
 }
+/* Media Queries for smaller screens */
+@media (min-width: 340px) and (max-width: 768px) {
+  /* Ensure notifications container takes full width */
+  .notifications-container {
+    width: 100%;
+    padding: 10px;
+  }
 
+  /* Adjust notification cards */
+  .notification-card {
+    flex-direction: column; /* Stack content vertically */
+    padding: 8px;
+    border-left: 4px solid #043030;
+    
+    
+  }
+
+  /* Adjust icon and spacing */
+  .notification-icon {
+    margin: 0 0 10px 0; /* Add margin below the icon */
+    font-size: 20px; 
+  }
+
+  /* Adjust text inside the notification content */
+  .notification-content h3 {
+    font-size: 16px; /* Smaller heading */
+    margin-bottom: 5px;
+  }
+
+  .notification-content p {
+    font-size: 14px; /* Smaller paragraph font */
+    margin-bottom: 5px;
+  }
+
+  .notification-time {
+    font-size: 12px; /* Smaller timestamp font */
+    text-align: right; /* Align timestamp to the right */
+    margin-top: 5px;
+  }
+}
 /* settings */
+.sidebar-4 {
+   
+  background-color: #008080;
+  width: 250px;
+ 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.sidebar-4.active{
+  left: 0;
+}
+/* Hamburger menu styles */
+.hamburger-menu-4 {
+display: none;
+position: fixed;
+top: 20px;
+left: 20px;
+font-size: 24px;
+cursor: pointer;
+z-index: 1100;
+color: white;
+background-color: #008080;
+}
+
+.hamburger-menu-4 i {
+pointer-events: none;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 340px) and (max-width: 768px) {
+.hamburger-menu-4 {
+  display: block;
+}
+.sidebar-4{
+  display: none;
+}
+.sidebar-4.active{
+display: block;
+}
+.sidebar-4 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-4 ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-4 ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.sidebar-4.active{
+  left: 0;
+}
+}
+
+
+
+.sidebar-4 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-4 ul li {
+  margin: 30px 0;
+}
+
+.sidebar-4 ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.sidebar-4 ul li a i {
+  margin-right: 10px;
+}
+
+.sidebar-4 ul li a:hover {
+  background-color:#043030;
+  border-radius: 5px;
+}
 
 .settings-header {
   text-align: center;
@@ -719,6 +1259,100 @@ body {
 }
 
 /* chat menu */
+.sidebar-5 {
+   
+  background-color: #008080;
+  width: 250px;
+ 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.sidebar-5.active{
+  left: 0;
+}
+/* Hamburger menu styles */
+.hamburger-menu-5 {
+display: none;
+position: fixed;
+top: 20px;
+left: 10rem;
+font-size: 24px;
+cursor: pointer;
+z-index: 1100;
+color: white;
+background-color: #008080;
+}
+
+.hamburger-menu-5 i {
+pointer-events: none;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 340px) and (max-width: 768px) {
+.hamburger-menu-5 {
+  display: block;
+}
+.sidebar-5{
+  display: none;
+}
+.sidebar-5.active{
+display: block;
+}
+.sidebar-5 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-5 ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-5 ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+.sidebar-5.active{
+  left: 0;
+}
+}
+
+
+
+.sidebar-5 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-5 ul li {
+  margin: 30px 0;
+}
+
+.sidebar-5 ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.sidebar-5 ul li a i {
+  margin-right: 10px;
+}
+
+.sidebar-5 ul li a:hover {
+  background-color:#043030;
+  border-radius: 5px;
+}
+
 .chat-layout {
   flex: 1; 
 
